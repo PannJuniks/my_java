@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.2.3.2</title>
+</head>
+<body>
+    <script>
+
+var a;
+var b;
+function math_random_int(a, b) {
+if (a > b) {
+
+var c = a;
+a = b;
+b = c;
+}
+return Math.floor(Math.random() * (b - a + 1) + a);
+}
+a = math_random_int(-9, 9);
+b = math_random_int(-9, 9);
+window.alert(['случайные числа: ',a,', ',b].join(''));
+if (a > b) {
+window.alert('наибольшее из двух чисел ' + a);
+window.alert('наименьшее из двух чисел ' + b);
+} else {
+window.alert('наибольшее из двух чисел ' + b);
+window.alert('наименьшее из двух чисел ' + a);
+}
+
+
+    </script>
+</body>
+</html>

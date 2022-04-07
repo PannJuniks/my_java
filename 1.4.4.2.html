@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+ function fun1() {
+    let list = document.getElementById('input').value
+    list = list.split(' ')
+    let max = 0
+    let max_id = 0
+    max = Math.max.apply(null, list)
+    for (i in list) {
+        if (list[i] == max){
+            max_id = Number(i)
+            max_id += 1
+        }
+    }
+    console.log(max)
+    console.log(max_id)
+    document.getElementById('ans').innerHTML = `Число: ${max}<br> Игрок: ${max_id}`
+
+}
+
+
+
+ </script>
+<body>
+ 
+<input type="text" id="input" placeholder="input it here">
+<input type="button" value="exequte" onclick="fun1()">
+<p id="ans"></p>
+
+</body>
+</html>
